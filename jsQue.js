@@ -26,9 +26,21 @@ var obj2 = obj.filter((e) => {
    
     return e.age > 20
  })
- 
+
 // ak string hai uske har ak word ko reverse karo ro fir se join kar ke do..
 var str = "Hello Arvind Bhai kaise ho..."
 var newArray = str.split(" ").map((elem) => { return elem.split("").reverse().join("") })
 newStr = newArray.join(" ")
 console.log(newStr);
+
+// how to Empty an Array in js 
+var nn = [123,46,232,13,134,575,2324]
+nn.length = 0
+// Check number is Integer or not Without using .isInteger()
+var kj = 325
+if (kj%1 == 0) {
+    console.warn("integer");
+} else {
+    console.warn("Not");
+    
+}
