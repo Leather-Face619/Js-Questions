@@ -12,6 +12,7 @@ clu++}
           arr.splice(i,1)
         }}}
 console.log(arr);
+
 //Remove all elem which are younger then 20
 var obj = [
 {name:"arvi", age: 20, alive:true},
@@ -39,8 +40,18 @@ nn.length = 0
 // Check number is Integer or not Without using .isInteger()
 var kj = 325
 if (kj%1 == 0) {
-    console.warn("integer");
+    console.warn("Integer");
 } else {
     console.warn("Not");
-    
 }
+// doo([1,2,3]) //ot-> [1,2,3,1,2,3]
+function doo(params) {
+   return params.concat(params);
+}
+console.log(doo([4,2,5]));
+//write a finc to reverse a number
+function reverse(params) {
+   var p2 =  params.toString().split("").reverse().join("")
+    return  Number(p2)
+}
+console.log(reverse(54));
