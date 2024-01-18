@@ -16,7 +16,7 @@ clu++}
 
 }
 console.log(arr);
-//Remove all elem which are younger than 20
+//Remove all elem which are younger then 20
 var obj = [
 {name:"arvi", age: 20, alive:true},
 {name:"ravi", age: 43, alive:true},
