@@ -37,6 +37,7 @@ console.log(newStr);
 // how to Empty an Array in js 
 var nn = [123,46,232,13,134,575,2324]
 nn.length = 0
+
 // Check number is Integer or not Without using .isInteger()
 var kj = 325
 if (kj%1 == 0) {
@@ -49,9 +50,55 @@ function doo(params) {
    return params.concat(params);
 }
 console.log(doo([4,2,5]));
-//write a finc to reverse a number
+
+//write a func to reverse a number
 function reverse(params) {
    var p2 =  params.toString().split("").reverse().join("")
     return  Number(p2)
 }
 console.log(reverse(54));
+/*Another way to solve this*/
+function reversekaro(num)   {
+    var reverse = 0
+    while (num>0) {
+        let reminder = num%10;
+         reverse = reverse*10+reminder
+        num = Math.floor(num/10)
+    } 
+    return reverse
+}
+console.log(reversekaro(2734928));
+
+// check Given string is a palindrome or not
+
+var checkKar = (str) => {
+    let rev =  str.split("").reverse().join("")
+str==rev? console.log("Yes"):console.log("no")}
+console.log(checkKar("poop"));
+
+// arrange string in alphabetical order 
+
+var alpha = (str) => { 
+    return str.split("").sort().join("")
+ } 
+ console.log(alpha("Arvind"));
+
+ // uppercase 1st letter of the string 
+ var up = (str) => { 
+
+ let ans = str.split(" ").map((e) => { 
+    return e.charAt(0).toUpperCase() + e.substring(1)
+})
+return  ans.join(" ")
+ }
+ console.log(up("arvind kaise ho?"));
+
+ //string ke har ak alphabet ko count karo ki vo kitne baar aaya.
+var oc = (elem) => { 
+    var occurrence = {}
+    elem.split("").forEach(element  => {
+        occurrence.hasOwnProperty(element) == true ? occurrence[element]++ : occurrence[element] =1 
+    });
+    return occurrence
+ }
+ console.log(oc("aaabbccccdd"));
