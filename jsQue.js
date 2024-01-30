@@ -234,3 +234,18 @@ function union(arr1,arr2) {
    return [...new  Set(arr1.concat(arr2))]
 }
 // console.log(union([2,3,46,6,2],[3,4,5,7,5]));
+
+//Accept the Gender and Generate ot at the basis of Gender
+function wel(ob) {
+    if (ob.gender=="male") {
+        console.log("Hello Sir")
+    } else if (ob.gender=="female") {
+    
+        console.log("Hello Mam")
+        
+    }
+    else{
+        console.log("Hello ")
+    }
+}
+wel(obj[5])
