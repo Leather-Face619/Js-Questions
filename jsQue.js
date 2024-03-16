@@ -142,24 +142,24 @@ var nu = (e) => {
 }
  console.log(re(obj)); */
 //Another way to solve this 
-var re = (e ) => {
+var re = (e) => {
     var count = 0
     e.forEach(element => {
-    if (element.gender !== 'male') count++
-})
-for (let j = 1; j <=count; j++) {
-    for (let i = 0; i < e.length; i++) {
-        if (e[i].gender !=='male') {
-            newobj.splice(i,1)
+        if (element.gender !== 'male') count++
+    })
+    for (let j = 1; j <= count; j++) {
+        for (let i = 0; i < e.length; i++) {
+            if (e[i].gender !== 'male') {
+                newobj.splice(i, 1)
+            }
         }
     }
-}
-return newobj
- 
+    return newobj
+
 }
 var newobj = [...obj]
 //console.log(re(newobj)); 
- 
+
 // // Clone Array
 /* var clo = (e) => { return e.map((ale) => { return ale }) }
  var newarr= clo(arr)
@@ -169,29 +169,29 @@ var newarr = [...arr]
 // console.log("sdadasd "+newarr);
 
 //type batani hai 
- function tt(params) {
+function tt(params) {
     return typeof params
- }
+}
 //  console.log(tt(true));
 
 // ak func banao jo array ko print kare or by default vo 1 baar print kare 
-function pri(arr,n=1) {
-    if (n<=arr.length) {
+function pri(arr, n = 1) {
+    if (n <= arr.length) {
         for (let i = 0; i < n; i++) {
-             console.log( arr[i]);
+            console.log(arr[i]);
         }
-        
+
     } else console.log(`${n} itne to elements hi nahi hai`);
 }
 // pri([3,5,8,1],3)
 
 // ak func banao jo array ko reverse se print kare or by default vo 1 baar print kare 
-function repri(arr,n=1) {
-    if (n<=arr.length) {
+function repri(arr, n = 1) {
+    if (n <= arr.length) {
         for (let i = 0; i < n; i++) {
-             console.log( arr[arr.length -1 -i]);
+            console.log(arr[arr.length - 1 - i]);
         }
-        
+
     } else console.log(`${n} itne to elements hi nahi hai`);
 }
 // repri([3,5,8,11],2)
@@ -204,12 +204,12 @@ function freq(arr) {
         if (freq.hasOwnProperty(element)) {
             freq[element]++
         }
-        else freq[element] = 1 
+        else freq[element] = 1
     });
-    var mostfreq = Object.keys(freq).reduce((acc,curr) => { 
-        return freq[acc]> freq[curr]? acc:curr 
+    var mostfreq = Object.keys(freq).reduce((acc, curr) => {
+        return freq[acc] > freq[curr] ? acc : curr
     })
-        console.log(mostfreq);
+    console.log(mostfreq);
 }
 // freq([2,6,7,8,4,5,4])
 
@@ -217,12 +217,12 @@ function freq(arr) {
 function suffleKaro(arr) {
     var totalArea = arr.length
     while (totalArea > 0) {
-        
+
         totalArea--
-        var indextobechanged = Math.floor(Math.random()*totalArea)
-      
+        var indextobechanged = Math.floor(Math.random() * totalArea)
+
         let temp = arr[totalArea]
-        arr[totalArea] = arr[indextobechanged] 
+        arr[totalArea] = arr[indextobechanged]
         arr[indextobechanged] = temp
     }
     return arr
@@ -230,22 +230,7 @@ function suffleKaro(arr) {
 }
 // console.log(suffleKaro([3,4,5,6,7,8,9,10]));
 //
-function union(arr1,arr2) {
-   return [...new  Set(arr1.concat(arr2))]
+function union(arr1, arr2) {
+    return [...new Set(arr1.concat(arr2))]
 }
 // console.log(union([2,3,46,6,2],[3,4,5,7,5]));
-
-//Accept the Gender and Generate ot at the basis of Gender
-function wel(ob) {
-    if (ob.gender=="male") {
-        console.log("Hello Sir")
-    } else if (ob.gender=="female") {
-    
-        console.log("Hello Mam")
-        
-    }
-    else{
-        console.log("Hello ")
-    }
-}
-wel(obj[5])
