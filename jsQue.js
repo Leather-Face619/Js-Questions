@@ -229,8 +229,43 @@ function suffleKaro(arr) {
 
 }
 // console.log(suffleKaro([3,4,5,6,7,8,9,10]));
-//
 function union(arr1, arr2) {
     return [...new Set(arr1.concat(arr2))]
 }
 // console.log(union([2,3,46,6,2],[3,4,5,7,5]));
+
+// ak func banao  Deep copy ke liye
+var obj121 = {
+    name: "Arvind",
+    age: 20,
+    city: "Bhilai",
+    social: {
+        linkedin: "arvind-kumar-007/",
+        github: "/ArvindKumar007",
+        instagram: "www.instagram.com",
+        facebook: "facebook.comarvindkumar007",
+
+    }
+}
+// Easy tarika
+function deepCopy(obj) {
+    return JSON.parse(JSON.stringify(obj))
+}
+//var obj2 = deepCopy(obj121)
+// console.log(obj2);
+
+//Hard tarika 
+var makeDeepCopy = (obj) => {
+    if (typeof obj != 'object' || obj === null) {
+        return obj;
+    }
+    var copiedvar = Array.isArray(obj) ? []:{}
+     var keys = Object.keys(obj)
+     for (let i = 0; i < keys.length; i++) {
+       copiedvar[keys[i]] = makeDeepCopy(obj[keys[i]])
+        }
+        return copiedvar
+}
+var obj2 = makeDeepCopy(obj121)
+console.log(obj2);
+
